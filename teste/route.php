@@ -1,7 +1,9 @@
 <?php
 $rotas = [
     "/" => "/pages/home.html",
-    "/error" => "/pages/404.php"
+    "/error" => "/pages/404.php",
+    "/cadastro" => "/pages/cadastro.html",
+    "/login" => "/pages/login.html"
 ];
 
 

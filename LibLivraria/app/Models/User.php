@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -17,6 +18,11 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    public static function create(array $attributes = [])
+    {
+        $attributes['senha'] = Hash::make($attributes['password']); // Criptografa a senha antes de salvar
+        return static::query()->create($attributes); // Chama o método create padrão do Laravel
+    }
     protected $fillable = [
         'name',
         'email',

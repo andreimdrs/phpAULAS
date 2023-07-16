@@ -1,0 +1,117 @@
+body {
+    background-image: url('/images/lib.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.776);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 150px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    transition: box-shadow 0.3s, color 0.3s;
+}
+
+.container label {
+    color: #000000;
+}
+
+.container.dark-mode label {
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para o dark mode */
+body.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.overlay.dark-mode {
+    background-color: rgba(9, 9, 9, 0.929);
+}
+
+.container.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.dark-mode-toggle button {
+    color: #fff;
+}
+
+.dark-mode-toggle button.btn-dark {
+    background-color: #000;
+    border-color: #000;
+}
+
+.dark-mode-toggle button.btn-dark:hover {
+    background-color: #111;
+    border-color: #111;
+}
+
+.container:hover .dark-mode-toggle {
+    opacity: 1;
+}
